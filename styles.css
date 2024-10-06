@@ -101,7 +101,6 @@ h1.underline::before {
     height: 3px;
     background: var(--gradient);
 }
-
 .contact{
     display:flex;
     flex-direction:row;
@@ -114,7 +113,6 @@ h1.underline::before {
     display:flex;
     flex-direction:row;
     flex-wrap:nowrap;
-    position: relative;
 }
 .project img{
     width: 20em;
