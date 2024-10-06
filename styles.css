@@ -24,6 +24,12 @@ html,body{
     color: var(--light);
 }
 
+a{
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .header{
     width: 100%;
     height:fit-content;
@@ -46,7 +52,7 @@ html,body{
     padding:3px;
     background-image: var(--gradient);
 }
-.contact{
+.name{
     padding:0 0 0 0;
     display:flex;
     justify-content: center;
@@ -101,6 +107,18 @@ h1.underline::before {
     flex-direction:row;
     flex-wrap:nowrap;
     gap:4px;
+    padding:5px 7px 5px 0;
+}
+
+.project{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    position: relative;
+}
+.project img{
+    width: 20em;
+    height: 12em;
 }
 
 .footer{
