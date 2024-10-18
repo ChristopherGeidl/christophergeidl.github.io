@@ -123,6 +123,39 @@ h1.underline::before {
     padding:5px 7px 5px 0;
 }
 
+.skill_bar{
+    width: 90%;
+    height: 0.5em;
+    background-color: var(--dark);
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+#Python, #CPP, #Java, #Javascript, #HTML, #CSS, #git{
+    background: var(--gradient);
+    height: 100%;
+}
+#Python{
+    width: 60%;
+}
+#CPP{
+    width: 60%;
+}
+#Java{
+    width: 60%;
+}
+#Javascript{
+    width: 70%;
+}
+#HTML{
+    width: 80%;
+}
+#CSS{
+    width: 70%;
+}
+#git{
+    width: 25%;
+}
+
 .project{
     display:flex;
     flex-direction:row;
