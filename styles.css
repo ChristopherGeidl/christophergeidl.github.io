@@ -28,6 +28,20 @@ a{
     background: var(--gradient);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 0 0 0;
+}
+a:hover::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    left: 0;
+    height: 1.5px;
+    background: var(--gradient);
 }
 
 .header{
@@ -117,6 +131,9 @@ h1.underline::before {
 .project img{
     width: 20em;
     height: 12em;
+}
+.projectInfo a{
+    margin-left:1em;
 }
 
 .education_note{
