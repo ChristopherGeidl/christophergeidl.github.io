@@ -84,14 +84,14 @@ a:hover::before {
     justify-content:center;
     gap:1em;
 }
-.right,.left{
+.left,.right{
     height: fit-content;
     padding: 0 0 0 0;
 }
-.right{
+.left{
     width: 60%;
 }
-.left{
+.right{
     width: 30%;
 }
 .panel{
