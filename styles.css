@@ -126,35 +126,40 @@ h1.underline::before {
 .skill_bar{
     width: 90%;
     height: 0.5em;
-    background-color: var(--dark);
+    background: var(--gradient);
     padding: 0 0 0 0;
     margin: 0 0 0 0;
+    position:relative;
 }
 #Python, #CPP, #Java, #Javascript, #HTML, #CSS, #git{
-    background: var(--gradient);
+    background-color: var(--dark);
     height: 100%;
+    width: 100%;
+    position:absolute;
+    right: 0;
 }
 #Python{
-    width: 60%;
+    width: 40%;
 }
 #CPP{
-    width: 60%;
+    width: 40%;
 }
 #Java{
-    width: 60%;
+    width: 40%;
 }
 #Javascript{
-    width: 70%;
+    width: 30%;
 }
 #HTML{
-    width: 80%;
+    width: 20%;
 }
 #CSS{
-    width: 70%;
+    width: 30%;
 }
 #git{
-    width: 25%;
+    width: 75%;
 }
+
 
 .project{
     display:flex;
