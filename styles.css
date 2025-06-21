@@ -1,210 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 :root{
-    --gradient : linear-gradient(90deg, rgba(180,58,178,1) 0%, rgba(253,29,84,1) 50%, rgba(252,178,69,1) 100%);
-    --dark: #1a1a1a;
-    --med_dark: #303030;
-    --light: #ebebeb;
+    --black: #1A1A1A;
+    --white: #EDEDED;
+    --transparentWhite: rgba(237, 237, 237, 0.95);
+    --gray: #B8B8B8;
+    --yellow: #FFCC00;
+    --inverseYellow: #0033FF;
 }
 
 *{
-    background-color: inherit;
+    font-family: "Space Grotesk", sans-serif;
     color: inherit;
-    font-family: "Titillium Web", sans-serif;
-    font-style: normal;
-    overflow-x:hidden;
-    margin:inherit;
-    padding:inherit;
-}
-
-html,body{
-    width: 100%;
-    height: 100%;
-    margin:0 0 0 0;
-    padding:0 0 0 0;
-    background-color: var(--dark);
-    color: var(--light);
-}
-
-a{
-    background: var(--gradient);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-color: inherit;
+    font-size: inherit;
+    border: none;
     text-decoration: none;
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    padding: 0 0 0 0;
-}
-a:hover::before {
-    content: "";
-    position: absolute;
-    top: 80%;
-    width: 100%;
-    left: 0;
-    height: 1.5px;
-    background: var(--gradient);
-}
-
-.header{
-    width: 100%;
-    height:fit-content;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:row;
-    flex-wrap:wrap;
-    background-color: var(--med_dark);
-    padding: 1.5em 0 1.5em 0;
-}
-.headImage{
-    border-radius:100%;
-    width: 12em;
-    height: 12m;
-    display:block;
-}
-.headImageWrapper{
-    border-radius:100%;
-    padding:3px;
-    background-image: var(--gradient);
-}
-.name{
-    padding:0 0 0 0;
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction:column;
-    flex-wrap:wrap;
-}
-
-.panel-wrapper{
-    display:flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
-    width:100%;
-    height:fit-content;
-    justify-content:center;
-    gap:1em;
-}
-.left,.right{
-    height: fit-content;
-    padding: 0 0 0 0;
-}
-.left{
-    width: 60%;
-}
-.right{
-    width: 30%;
-}
-.panel{
-    width: 100%;
-    height: fit-content;
-    background-color: var(--med_dark);
-    padding: 10px 20px 10px 10px;
-}
-
-h1.underline{
-    position: relative;
-    width:fit-content;
-    height:fit-content;
-}
-h1.underline::before {
-    content: "";
-    position: absolute;
-    top: 80%;
-    width: 90%;
-    left: 10px;
-    height: 3px;
-    background: var(--gradient);
-}
-.contact{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
-    gap:4px;
-    padding:5px 7px 5px 0;
-}
-
-.skill_bar{
-    width: 90%;
-    height: 0.5em;
-    background: var(--gradient);
     padding: 0 0 0 0;
     margin: 0 0 0 0;
-    position:relative;
 }
-#Python, #CPP, #Java, #Javascript, #HTML, #CSS, #git{
-    background-color: var(--dark);
-    height: 100%;
+html{
+    background-color: var(--black);
+    color: var(--white);
+    overflow-x: none;
+    scroll-behavior: smooth;
+}
+.special{
+    color: var(--yellow);
+}
+.flex-reverse{
+    flex-direction: row-reverse !important;
+}
+@media (max-width: 800px){
+    .flex-reverse{
+        flex-direction: column !important;
+    }
+}
+.title {
+    font-size: 96px;
+    text-shadow: 2px 2px 8px var(--black);
+    position: relative;
+    padding: 0px 0px 0px 0px;
+    width: fit-content;
+    background: none;
+}
+.title::after {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 15%;
+    width: 90%;
+    height: 25%;
+    background-color: var(--yellow);
+    z-index: 10;
+}
+.title span{
+    position: relative;
+    z-index: 100;
+}
+
+#nav{
+    background: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    position:absolute;
-    right: 0;
-}
-#Python{
-    width: 40%;
-}
-#CPP{
-    width: 40%;
-}
-#Java{
-    width: 40%;
-}
-#Javascript{
-    width: 30%;
-}
-#HTML{
-    width: 20%;
-}
-#CSS{
-    width: 30%;
-}
-#git{
-    width: 75%;
-}
-
-
-.project{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
-}
-.project img{
-    width: 20em;
-    height: 12em;
-}
-.projectInfo a{
-    margin-left:1em;
-}
-
-.education_note{
+    height: fit-content;
     display: flex;
     flex-direction: row;
-    flex-wrap:nowrap;
+    color: var(--white);
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+    font-size: 36px;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease, border-bottom 0.3s ease; /*transition in js*/
 }
-.education_note h4, .education_note p{
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+#nav span{
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.education_note p{
-    margin-left: 10px;
+#nav span a{
+    width: 97px;
+    height: 44px;
+    margin-right: 55px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.3s ease; /*transition in js*/
 }
-.classes{
-    font-size:15px;
-    list-style-position:inside;
+#nav span a:hover{
+    color: var(--gray);
+    transition: none; /* Prevent hover effects from conflicting */
 }
-.classes h4, .classes li{
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-}
-.classes h4{
-    margin-bottom: 5px;
+@media (max-width: 800px){
+    #nav{
+        justify-content: center;
+    }
+    #nav-name{
+        display: none;
+    }
 }
 
-.footer{
+.section{
     width: 100%;
     height: fit-content;
-    font-weight:bold;
-    padding:0.5em 0 0.5em 0;
-    display:flex;
+    display: flex;
     justify-content: center;
-    align-items:center;
-    background-image: var(--gradient);
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--white);
+}
+
+#home{
+    background-image: url("images/burnt-wood.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 500px 0px 500px 0px;
+}
+#home div{
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    padding: 0px 0px 0px 0px;
+}
+#home div h1{
+    text-align: center;
+}
+#home div a {
+    font-size: 32px;
+    border: 4px solid var(--yellow);
+    padding: 15px 25px;
+    position: relative;
+    z-index: 10;
+    transition: color 0.3s ease-in-out;
+}
+#home div a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--yellow);
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: height 0.3s ease-in-out;
+}
+#home div a:hover {
+    color: var(--black);
+}
+#home div a:hover::after {
+    height: 100%;
+}
+@media (max-width: 800px){
+    #home div{
+        font-size: 30px;
+    }
+    #home div a{
+        font-size: 24px;
+    }
+}
+
+#project{
+    padding: 20px 0px 80px 0px;
+}
+#project div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin: 40px 0px 80px 0px;
+}
+#project div *{
+    max-width: 1000px;
+}
+#project div img{
+    width: 45%;
+    background-color: var(--white);
+    color: black;
+    aspect-ratio: 1 / 0.75;
+}
+#project div span{
+    box-sizing: border-box;
+    padding: 60px 60px 60px 60px;
+    width: 45%;
+    aspect-ratio: 1 / 0.75;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    font-size: 24px;
+}
+#project div span *{
+    padding: 0px 0px 0px 0px;
+}
+#project div span h1{
+    font-size: 36px;
+}
+#project div span a{
+    font-weight: bold;
+}
+#project div span a:hover{
+    text-decoration: underline;
+}
+@media (max-width: 800px){
+    #project .title span{
+        font-size: 50px;
+    }
+    #project div{
+        flex-direction: column;
+        margin: 40px 0px 0px 0px;
+    }
+    #project div img, #project div span{
+        width: 100%;
+    }
+    #project div span{
+        align-items: center;
+        justify-content: center;
+        gap: 41px;
+    }
+    #project div span h1{
+        font-size: 32px;
+    }
+    #project div span p{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+#contact{
+    border-bottom: none;
+}
+#contact h1{
+    margin-top: 100px;
+}
+#contact p{
+    font-weight: bold;
+    font-size: 32px;
+    width: 600px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+#contact div{
+    position: relative;
+    background-color: var(--white);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    padding: 80px 0px 80px 0px;
+}
+#back-to-top-link{
+    background-color: var(--yellow);
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -30px;
+    content: "";
+    background-image: url("images/up-arrow.svg");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#back-to-top-link:hover{
+    transform: scale(1.2);
+}
+#github-link, #email-link, #linkedin-link{
+    width: 60px;
+    height: 60px;
+    background-color: var(--black);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+}
+#github-link{
+    background-image: url("images/github.svg");
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--white);
+}
+#github-link:hover{
+    transform: scale(1.2);
+}
+#email-link{
+    background-image: url("images/mail.svg");
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#email-link:hover{
+    transform: scale(1.2);
+}
+#linkedin-link{
+    background-image: url("images/linkedin.svg");
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#linkedin-link:hover{
+    transform: scale(1.2);
+}
+@media (max-width: 800px){
+    #contact .title{
+        font-size: 64px;
+    }
+    #contact p{
+        font-size: 20px;
+        width: 300px;
+    }
 }

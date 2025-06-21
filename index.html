@@ -3,151 +3,60 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <title>CGeidl | Portfolio</title>
+        <script src="script.js"></script>
+        <title>Christopher Geidl</title>
     </head>
+
     <body>
-        <!--Header-->
-        <div class="header">
-            <div class="headImageWrapper"><img src="head.png" alt = "pic" class="headImage"></div>
-            <div class="name">
-                <h1>Christopher Geidl</h1>
-                <h5>christophergeidl@gmail.com</h5>
-            </div>
+        <div id="nav">
+            <a href="index.html" id="nav-name">Christopher Geidl</a>
+            <span>
+                <a href="#home" id="nav-home-link">Home</a>
+                <a href="#project" id="nav-project-link">Projects</a>
+                <a href="#contact" id="nav-contact-link">Contact</a>
+            </span>
         </div>
-        <br>
 
-        <div class="panel-wrapper">
-            <div class="left">
-                <!--About Me-->
-                <div class="panel">
-                    <h1 class="underline">About Me</h1>
-                    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. 
-                    Accumsan facilisi feugiat sollicitudin dolor ullamcorper 
-                    pharetra eros tellus arcu. Efficitur viverra turpis mattis 
-                    ligula et tempor. Sodales blandit rutrum adipiscing adipiscing
-                    purus vitae at tellus. Feugiat eu libero ipsum platea aptent  
-                    nulla. Fermentum amet vestibulum vestibulum orci; tempus dictum 
-                    est. Faucibus magna cubilia non tellus magna varius maecenas.
-                    </p>
-                </div>
+        <div id="home" class="section">
+            <div>
+                <h1>I'm <span class="special">Christopher Geidl</span>,</h1>
+                <h1>Computer Engineering Student</h1>
                 <br>
-                <!--Projects-->        
-                <div class="panel">
-                    <h1 class="underline">Projects</h1>
-                    <div class="project">
-                        <img src="head.png" alt="projectPic">
-                        <div class="projectInfo">
-                            <h3>Project Name</h3>
-                            <p>This is the description of a very cool project.</p>
-                            <a href="">Find out More</a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <img src="head.png" alt="projectPic">
-                        <div class="projectInfo">
-                            <h3>Project Name</h3>
-                            <p>This is the description of a very cool project.</p>
-                            <a href="">Find out More</a>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <img src="head.png" alt="projectPic">
-                        <div class="projectInfo">
-                            <h3>Project Name</h3>
-                            <p>This is the description of a very cool project.</p>
-                            <a href="">Find out More</a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <!--Volunteer Work-->
-                <div class="panel">
-                    <h1 class="underline">Volunteer Work</h1>
-                    <h4>NONE</h4>
-                </div>
-                <br>
-                <!--Work Experience-->
-                <div class="panel">
-                    <h1 class="underline">Work Experience</h1>
-                    <h4>NONE</h4>
-                </div>
-                <br>
-            </div>
-
-
-            <div class="right">
-                <!--Contacts-->
-                <div class="panel">
-                    <h1 class="underline">Contacts</h1>
-                    <span class="contact"><h4>Home:</h4><p>Boise, ID, United States</p></span>
-                    <span class="contact"><h4>Email:</h4><a href="mailto:christophergeidl@gmail.com">christophergeidl@gmail.com</a></span>
-                    <span class="contact"><h4>GitHub:</h4><a href="https://github.com/ChristopherGeidl">github.com/ChristopherGeidl</a></span>
-                </div>
-                <br>
-                <!--Technical Skills-->
-                <div class="panel">
-                    <h1 class="underline">Technical Skills</h1>
-                    <h4>HTML - intermediate</h4>
-                    <div class="skill_bar">
-                        <div id="HTML"></div>
-                    </div>
-                    <h4>CSS - intermediate</h4>
-                    <div class="skill_bar">
-                        <div id="CSS"></div>
-                    </div>
-                    <h4>Javascript - intermediate</h4>
-                    <div class="skill_bar">
-                        <div id="Javascript"></div>
-                    </div>
-                    <h4>Python - intermediate</h4>
-                    <div class="skill_bar">
-                        <div id="Python"></div>
-                    </div>
-                    <h4>C++ - intermediate</h4>
-                    <div class="skill_bar">
-                        <div id="CPP"></div>
-                    </div>
-                    <h4>Java - intermediate</h4>
-                    <div class="skill_bar">
-                        <div id="Java"></div>
-                    </div>
-                    <h4>git - basic</h4>
-                    <div class="skill_bar">
-                        <div id="git"></div>
-                    </div>
-                </div>
-                <br>
-                <!--Education-->
-                <div class="panel">
-                    <h1 class="underline">Education</h1>
-                    <h4>Student at The University of Idaho</h4>
-                    <span class="education_note"><h4>Major: </h4><p>Computer Engineering & Electrical Engineering</p></span>
-                    <span class="education_note"><h4>Current GPA: </h4><p>4.0</p></span>
-                    <ul class="classes">
-                        <h4>Notable Classes:</h4>
-                        <li>CS 112 - Computation Thinking</li>
-                        <li>CS 120 - Computer Science I</li>
-                        <li>CS 121 - Computer Science II</li>
-                        <li>CYB 110 - Cybersecurity & Privacy</li>
-                        <li>ENGR 102 - Introduction to Engineering</li>
-                        <li>PHYS 111 - General Physics I</li>
-                        <li>PHYS 112 - General Physics II</li>
-                        <li>MATH 170 - Calculus I</li>
-                        <li>MATH 175 - Calculus II</li>
-                        <li>MATH 176 - Discrete Math</li>
-                    </ul>
-                </div>
-                <br>
+                <a href="#project" class="special">View my work</a>
             </div>
         </div>
 
-        <!--Footer-->
-        <div class="footer">
-            Thank you for your consideration
+        <div id="project" class="section">
+            <h1 class="title"><span>Projects</span></h1>
+            <div>
+                <img src="" alt="Project Image">
+                <span>
+                    <h1>Project Name</h1>
+                    <p>Short sentences that describes the project and everything else I want to say.</p>
+                    <a href="" class="special">Learn More</a>
+                </span>
+            </div>
+            <div class="flex-reverse">
+                <img src="" alt="Project Image">
+                <span>
+                    <h1>Project Name</h1>
+                    <p>Short sentences that describes the project and everything else I want to say.</p>
+                    <a href="" class="special">Learn More</a>
+                </span>
+            </div>
+        </div>
+
+        <div id="contact" class="section">
+            <h1 class="title"><span>Thank You</span></h1>
+            <br>
+            <p>Have questions? Contact me and I'll get back to you as soon as possible.</p>
+            <div>
+                <a href="#home" id="back-to-top-link"></a>
+                <a href="https://github.com/ChristopherGeidl" id="github-link"></a>
+                <a href="mailto:christophergeidl@gmail.com" id="email-link"></a>
+                <a href="https://www.linkedin.com/in/christopher-geidl-499087370" id="linkedin-link"></a>
+            </div>
         </div>
     </body>
 </html>
