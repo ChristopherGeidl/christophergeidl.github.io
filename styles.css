@@ -99,9 +99,11 @@ html{
 @media (max-width: 800px){
     #nav{
         justify-content: center;
+        padding: 10px 0px 10px 0px;
     }
     #nav span a{
-        margin-right: 10px;
+        margin-right: 0px;
+        gap: 10px;
     }
     #nav-name{
         display: none;
